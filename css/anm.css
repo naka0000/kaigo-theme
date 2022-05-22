@@ -1,0 +1,496 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ナビゲーション*/
+.animoBubble5{
+	display:inline-block;
+	z-index:1;
+	position:relative;
+	font-size:inherit;
+	font-family:inherit;
+	color:#fff;
+	padding:.5em 1em;
+	outline:0;
+	border:none;
+	background-color:#FEE7E7;
+	overflow:hidden;
+	transition:color .4s ease-in-out;
+}
+.animoBubble5::before{
+	content:'';
+	z-index:-1;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:1em;
+	height:1em;
+	border-radius:50%;
+	background-color:#D4647A;
+	transform-origin:center;
+	transform:translate3d(-50%,-50%,0) scale3d(0,0,0);
+	transition:transform .6s ease-in-out;
+}
+.animoBubble5:hover{
+	cursor:pointer;
+	color:#fff;
+}
+.animoBubble5:hover::before{
+	transform:translate3d(-50%,-50%,0) scale3d(15,15,15)
+}
+
+/*お問い合わせ*/
+.heartbeat{
+	animation:heartbeat 1.5s ease-in-out infinite both;
+}
+@keyframes heartbeat{
+	from{
+		transform:scale(1);
+		transform-origin:center center;
+		animation-timing-function:ease-out;
+	}
+	10%{
+		transform:scale(.91);
+		animation-timing-function:ease-in;
+	}
+	17%{
+		transform:scale(.98);
+		animation-timing-function:ease-out;
+	}
+	33%{
+		transform:scale(.87);
+		animation-timing-function:ease-in;
+	}
+	45%{
+		transform:scale(1);
+		animation-timing-function:ease-out;
+	}
+}
+
+/*メール相談*/
+.btnshine{
+	position: relative;
+}
+.btnshine::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -95%;
+	width: 70%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-25deg);
+}
+.btnshine:hover{
+	transform: scale(.9);
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.btnshine:hover::before {
+	animation: shine 0.7s;
+}
+@keyframes shine {
+100% {
+	left: 125%;
+}
+}
+.h-contact-txt{
+	z-index: 10;
+} 
+
+/*about tab*/
+.hvr-curl-bottom-right {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-curl-bottom-right:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.3s;
+  transition-property: width, height;
+}
+.hvr-curl-bottom-right:hover:before, 
+.hvr-curl-bottom-right:focus:before, 
+.hvr-curl-bottom-right:active:before{
+  width: 25px;
+  height: 25px;
+}
+
+/*タイトル*/
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;
+	opacity:0;
+}
+@keyframes bgextendAnimeBase{
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;  
+	}
+}
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+@keyframes bgextendAnimeSecond{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.bgLRextend::before{
+	animation-name:bgLRextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EB97A8;
+}
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+/*全共通コンテンツ*/
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes fadeUpAnime{
+	from{
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.zoomIn{
+	animation-name: zoomInAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes zoomInAnime{
+  from{
+	transform: scale(0.6);
+	opacity: 0;
+  }
+  to{
+    transform: scale(1);
+	opacity: 1;
+  }
+}
+
+.bounceInLeft {
+	animation-name: bounceInLeftAnime;
+	animation-duration: 1.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
+}
+
+@keyframes bounceInLeftAnime {
+  from,
+  30%,
+  45%,
+  60%,
+  to {
+    animation-timing-function: cubic-bezier(0,.63,.84,.36);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-1000px, 0, 0);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  45% {
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInRight {
+	animation-name: bounceInRightAnime;
+	animation-duration: 1.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes bounceInRightAnime {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInDown {
+	animation-name: bounceInDown;
+	animation-duration: 1.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+	animation-name: bounceInUp;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.flipInX {
+	backface-visibility: visible !important;
+	animation-name: flipInX;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.headShake {
+	animation-timing-function: ease-in-out;
+	animation-name: headShake;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.bgappearTrigger, .bgLRextendTrigger, .fadeUpTrigger{
+    opacity: 0;
+}
+
+.delay-time05{
+animation-delay: 0.5s;
+}
+.delay-time03{
+animation-delay: 0.3s;
+}
+
+/*ハンバーガーメニュー*/
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+

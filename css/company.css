@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+.company-sub img{
+	margin: 0 auto 20px;
+	display: block;
+}
+.company-sub dl{
+	line-height: 50px;
+}
+.company-sub dl dt{
+	background-color: #EF93B6;
+	color: #fff;
+	height: 50px;
+}
+.company-sub dl dd{
+	height: 50px;
+}
+
+.greeting-sub h4{
+	font-weight: 700;
+}
+.greeting-sub{
+	position: relative;
+}
+.greeting-ct h4{
+	font-size: 1.4rem;
+	margin-bottom: 20px;
+}
+.name{
+	font-size: 1.3rem;
+}
+.fs-s{
+	font-size: 1rem;
+}
+.slick-item{
+	background-color: #FFDBED;
+	border-radius: 10px;
+	padding: 30px;
+}
+.slick-item img{
+	margin: 0 auto 10px;
+}
+.staff-ttl{
+	display: flex;
+	justify-content: space-between;
+}
+.staff-ttl h5{
+	font-size: 1.4rem;
+}
+.staff-ttl-sub{
+	margin-top: 20px;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+/*responsive*/
+/*PC*/
+@media screen and (min-width:769px){
+	.company-sub dl{
+		border-top: 1px solid #BB1E5E;
+	}
+	.company-sub dl dt{
+		width: 30%;
+		padding-left: 70px;
+		border-bottom: 1px solid #fff;
+		float: left;
+	}
+	.company-sub dl dd{
+		width: 100%;
+		padding-left: 380px;
+		border-bottom: 1px solid #BB1E5E;
+		border-right: 1px solid #BB1E5E;
+	}
+	.gazo{
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+	.greeting-ct{
+		padding-top: 80px;
+		width: 52%;
+	}
+	.slick-items{
+		margin-bottom: 100px;
+	}
+	.staff-inner{
+		width: 100%;
+		max-width: 1280px;
+		margin-top: 150px;
+	}
+	.staff-ttl{
+		top: 50px;
+		left: 300px;
+	}
+}
+@media screen and (min-width:1280px){
+	.company-sub dl dt{
+		padding-left: 120px;
+	}
+	.company-sub dl dd{
+		padding-left: 480px;
+	}
+}
+@media screen and (max-width:1280px){
+	.staff-inner{
+		width: 90%;
+		margin: 50px auto 30px;
+	}
+	.gazo{
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+}
+/*tablet*/
+@media screen and (min-width:769px) and (max-width:999px){
+	.company-sub dl dt{
+		padding-left: 50px;
+	}
+	.company-sub dl dd{
+		padding-left: 300px;
+		
+	}
+}
+/*smartphone*/
+@media screen and (max-width:768px){
+	.company-sub dl{
+		width: 100%;
+	}
+	.company-sub dl dt{
+		padding-left: 5%;
+		border: 1px solid #BB1E5E;
+	}
+	.company-sub dl dd{
+		height: auto;
+		padding-left: 5%;
+		border: 1px solid #BB1E5E;
+	}
+	.gazo{
+		margin-top: 30px;
+	}
+}

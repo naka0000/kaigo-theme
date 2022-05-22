@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+
+.recuit-sub{
+	margin: 50px auto;
+	background-color: #FFF8FB;
+	padding: 50px 0;
+}
+.recuit-sub-wrap{
+	margin: auto;
+	text-align: center;
+}
+h4{
+	color: #EF93B6;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+	font-weight: 550;
+}
+.ta-ct{
+	text-align: center;
+	margin-bottom: 20px;
+}
+@media screen and (min-width:769px){
+	.recuit-ttl, .recuit-sub-wrap{
+		width: 100%;
+		max-width: 1280px;
+	}
+}
+@media screen and (max-width:1280px){
+	.recuit-ttl, .recuit-sub-wrap{
+		width: 90%;
+		margin: auto;
+	}
+}
+/*form*/
+form {
+	max-width: 1000px;
+	margin: auto;
+}
+.Form-Item {
+	border-top: 1px solid #EF93B6;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Form-Item:nth-child(5) {
+	border-bottom: 1px solid #F19CBD;
+}
+.Form-Item-Label {
+	width: 100%;
+	max-width: 248px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Form-Item-Label.isMsg {
+	margin-top: 8px;
+	margin-bottom: auto;
+}
+.Form-Item-Label-Required {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #00B42A;
+	color: #fff;
+	font-size: 14px;
+}
+.Form-Item-Select{
+	cursor: pointer;
+	appearance: none;
+	background: #ECEDF2
+		url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E")
+		right 10px center no-repeat;
+	padding: 12px 35px 12px 12px;
+	color: #000;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 48px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	font-size: 18px;
+}
+.Form-Item-Input {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 48px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+.Form-Item-Textarea {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 216px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+.Form-Btn {
+	border-radius: 6px;
+	margin: 50px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 280px;
+	display: block;
+	letter-spacing: 0.05em;
+	background: #00B42A;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+}
+.btn{
+    background: #eee;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 100px;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 5px 5px 0 #00B42A;
+}
+.btn:hover {
+	background-color: #00B42A;
+	color: #fff;
+	box-shadow: 0 0 0;
+	transform: translate(5px, 5px);
+}
+.btn:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 540px) {
+	form {
+		margin-top: 40px;
+	}
+	.Form-Item {
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		flex-wrap: wrap;
+	}
+	.Form-Item-Label {
+		max-width: inherit;
+		display: flex;
+		align-items: center;
+		font-size: 15px;
+	  }
+	.Form-Item-Label.isMsg {
+		margin-top: 0;
+	  }
+	.Form-Item-Label-Required {
+		border-radius: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		width: 32px;
+		font-size: 10px;
+  	}
+	.Form-Item-Select{
+		margin-left: 0;
+		margin-top: 18px;
+		height: 40px;
+		flex: inherit;
+		font-size: 15px;
+	}
+	 .Form-Item-Input {
+		margin-left: 0;
+		margin-top: 18px;
+		height: 40px;
+		flex: inherit;
+		font-size: 15px;
+	  }
+	 .Form-Item-Textarea {
+		margin-top: 18px;
+		margin-left: 0;
+		height: 200px;
+		flex: inherit;
+		font-size: 15px;
+	  }
+	 .Form-Btn {
+		margin-top: 24px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		width: 160px;
+		font-size: 16px;
+	  }
+}

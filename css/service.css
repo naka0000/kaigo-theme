@@ -1,0 +1,284 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*タブのスタイル*/
+
+.tab1{
+	border: 3px solid #0067B4;
+}
+.tap-wrap ul .tab1 a{
+	color: #0067B4;
+}
+.tap-wrap ul li:nth-child(2){
+	border: 3px solid #EBBD53;
+}
+.tap-wrap ul .tab2 a{
+	color: #EBBD53;
+}
+.tap-wrap ul li:nth-child(3){
+	border: 3px solid #63C3AA;
+}
+.tap-wrap ul .tab3 a{
+	color: #63C3AA;
+}
+.tap-wrap ul .tab1:hover{
+	background-color: #E5F0F7;
+}
+.tap-wrap ul .tab2:hover{
+	background-color: #FDF6E7;
+}
+.tap-wrap ul .tab3:hover{
+	background-color: #E9F7F3;
+}
+.tap-wrap ul .tab1.active,
+.tap-wrap ul .tab1.active a{
+    background-color: #0067B4;
+    color: #fff;
+}
+.tap-wrap ul .tab2.active,
+.tap-wrap ul .tab2.active a{
+    background-color: #EBBD53;
+    color: #fff;
+}
+.tap-wrap ul .tab3.active,
+.tap-wrap ul .tab3.active a{
+    background-color: #63C3AA;
+    color: #fff;
+}
+
+/*タブコンテンツ*/
+.homon-sub{
+	background: url("../images/homon-bg.jpg") center/ 100% no-repeat;
+}
+.itaku-sub{
+	background: url("../images/itaku-bg.jpg") center/ 100% no-repeat;
+}
+.sodan-sub{
+	background: url("../images/sodan-bg.jpg") center/ 100% no-repeat;
+}
+.inner-bg{
+	background-color: rgba(255,255,255,0.75);
+	padding: 50px 0;
+}
+.homon-sub h4, .homon-sub p, .itaku-sub h4, .itaku-sub p, .sodan-sub h4, .sodan-sub p{
+	margin: auto;
+	text-align: center;
+}
+.homon-sub h4, .itaku-sub h4, .sodan-sub h4{
+	margin-bottom: 30px;
+	font-size: 1.35rem;
+}
+ /*訪問介護*/
+.naiyo-inner{
+	background-color: #E5F0F7;
+}
+.naiyo-items{
+	margin: auto;
+	padding-top: 50px;
+}
+
+.nagare-sub{
+	text-align: center;
+}
+#homon .naiyo-sub{
+	background-color: #E5F0F7;
+}
+.naiyo-sub-item{
+	padding-bottom: 50px;
+}
+/*居宅介護支援*/
+#itaku .naiyo-sub{
+	background-color: #FDF6E7;
+}
+#itaku .naiyo-items{
+	padding-bottom: 50px;
+}
+
+/*相談支援*/
+#sodan .naiyo-inner{
+	background-color: #E9F7F3;;
+}
+.naiyo-item-1st{
+	padding-top: 50px;
+	margin: 0 auto -50px;
+}
+
+/*FAQ*/
+.faq-ttl{
+	padding: 20px 0 20px 50px;
+	font-size: 1.5rem;
+	background-color: #FFDBED;
+	border-top: 3px solid #BB1E5E;
+	margin: 50px 0 20px;
+}
+.qa__box{
+	background: #fff;
+	border: 1px solid #BB1E5E;
+	display: block;
+	margin: 0 auto 10px;
+	text-align: left;
+	
+}
+.qa__box:last-child{
+	margin-bottom: 50px;
+}
+.qa__ttl{
+	background: #FFDBED;
+	cursor: pointer;
+	display: table;
+	min-height: 70px;
+	width: 100%;
+	padding: 15px;
+}
+.icon-quesion{
+	background: #BB1E5E;
+	color: #fff;
+	display: table-cell;
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+	width: 65px;
+}
+.ttl-quesion{
+	display: table-cell;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 5px 60px 5px 30px;
+	vertical-align: middle;
+	width: calc(100% - 100px);
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+	transition-duration: 0.2s;
+}
+.qa__sub{
+	display: none;
+	padding: 30px 0;
+	width: 100%;
+}
+.icon-answer{
+	color: #BB1E5E;
+	display: table-cell;
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	width: 100px;
+}
+.ttl-answer{
+	display: table-cell;
+	font-size: .9rem;
+	line-height: 1.5;
+	padding: 5px 60px 5px 30px;
+	vertical-align: top;
+	width: calc(100% - 100px);
+	letter-spacing: .1rem;	
+}
+
+@media screen and (min-width:769px){
+	.tap-wrap ul{
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.tap-wrap ul li{
+		width: 32%;
+		text-align: center;
+		padding: 20px 0;
+		font-size: 1.5rem;
+		font-weight: 500;
+		border-radius: 15px;
+	}
+	.tap-wrap ul li a{
+		display: block;
+	}
+	.homon-sub h4, .homon-sub p, .itaku-sub h4, .itaku-sub p, .sodan-sub h4, .sodan-sub p{
+		width: 100%;
+		max-width: 1280px;
+	}
+	.naiyo-items{
+		width: 100%;
+		max-width: 1280px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.naiyo-item{
+		width: 30%;
+	}
+	.naiyo-sub-item{
+		width: 100%;
+		max-width: 1280px;
+		margin: auto;
+	}
+	#itaku .naiyo-item{
+		width: 48%;
+	}
+	.naiyo-item-1st{
+		padding-top: 50px;
+		width: 100%;
+		max-width: 1280px;
+	}
+	#sodan .naiyo-item{
+		width: 48%;
+	}
+	.taishou-sub ul{
+		display: flex;
+		justify-content: space-between;
+	}
+	.qa__box{
+		max-width: 1000px;
+		width: 100%;
+	}
+}
+@media screen and (min-width:769px) and (max-width:1280px){
+	.tap-wrap ul{
+		justify-content: space-around;
+	}
+	.tap-wrap ul li{
+		width: 30%;
+	}
+	.naiyo-items, .naiyo-sub-item, .qa__box{
+		width: 90%;
+		margin: auto;
+	}
+	.qa__box{
+		margin-bottom: 5px;
+	}
+}
+@media screen and (max-width:768px){
+	.tap-wrap ul{
+		width: 90%;
+		margin: 20px auto;
+	}
+	.tap-wrap ul li{
+		width: 90%;
+		text-align: center;
+		margin: 5px auto;
+		padding: 8px 0;
+		font-size: 1.5rem;
+		font-weight: 500;
+		border-radius: 15px;
+	}
+	.sec-ttl{
+		margin: 30px auto 10px;
+	}
+	.naiyo-items, .naiyo-sub-item, .qa__box{
+		width: 90%;
+		margin: auto;
+	}
+	.naiyo-item ul li{
+		padding-left: 10px;
+	}
+	.homon-sub, .itaku-sub, .sodan-sub{
+		background-size: 200%;
+	}
+}
+
+
+
+
+
+
+
